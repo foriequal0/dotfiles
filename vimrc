@@ -81,4 +81,4 @@ autocmd InsertLeave * :set relativenumber
 
 " easymotion leader setting
 let mapleader = ","
-map <Leader> <Plug>(easymotion-prefix) 
+map <Leader><Leader> <Plug>(easymotion-prefix)
