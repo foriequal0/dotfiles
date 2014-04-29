@@ -16,7 +16,10 @@ Plugin 'gmarik/vundle'
 " scripts on GitHub repos
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-rails.git'
+"Plugin 'tpope/vim-rails.git'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'Raimondi/delimitMate'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -26,7 +29,7 @@ Plugin 'FuzzyFinder'
 " scripts not on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+"Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
 
 filetype plugin indent on     " required
