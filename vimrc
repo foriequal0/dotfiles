@@ -46,6 +46,7 @@ filetype plugin indent on     " required
 " NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
 
+" Some stock settings and flags
 set autoindent " 자동으로 들여쓰기를 한다.
 set cindent " C 프로그래밍을 할때 자동으로 들여쓰기를 한다.
 set smartindent " 좀더 똑똑한 들여쓰기를 위한 옵션이다.
@@ -61,6 +62,7 @@ set relativenumber
 set hlsearch
 set hidden
 
+" Relative Linenumber toggle.
 function! NumberToggle()
     if(&relativenumber == 1)
         set number
@@ -68,11 +70,15 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-
+" C-n to toggle number.
 nnoremap <C-n> :call NumberToggle()<cr>
+" Number-RelativeNumber auto toggle with corresponding focus status.
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
-
+" Relative number mode on Navigate mode, Numbermode on Insert mode
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+" easymotion leader setting
+let mapleader = ","
+map <Leader> <Plug>(easymotion-prefix) 
