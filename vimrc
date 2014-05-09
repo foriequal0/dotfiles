@@ -83,3 +83,13 @@ autocmd InsertLeave * :set relativenumber
 " easymotion leader setting
 let mapleader = ","
 map <Leader><Leader> <Plug>(easymotion-prefix)
+
+" fast move between window
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Insert new line without editing mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
