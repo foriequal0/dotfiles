@@ -63,22 +63,42 @@ set relativenumber
 set hlsearch
 set hidden
 
+function! Linenum_SetRelativeNumber()
+    let g:Linenum_mode = "relative"
+    set number
+    set relativenumber
+endfunc
+function! Linenum_SetAbsoluteNumber()
+    let g:Linenum_mode = "absolute"
+    set number
+    set norelativenumber
+endfunc
+function! Linenum_SetNoNumber()
+    let g:Linenum_mode = "no" 
+    set nonumber
+    set norelativenumber
+endfunc
 " Relative Linenumber toggle.
 function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-    else
-        set relativenumber
+    if !exists('g:Linenum_mode') || g:Linenum_mode == "no"
+        call Linenum_SetAbsoluteNumber()
+    elseif g:Linenum_mode == "absolute"
+        call Linenum_SetRelativeNumber()
+    elseif g:Linenum_mode == "relative"
+        call Linenum_SetNoNumber()
     endif
 endfunc
 " C-n to toggle number.
 nnoremap <C-n> :call NumberToggle()<cr>
 " Number-RelativeNumber auto toggle with corresponding focus status.
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+autocmd FocusLost * :call Linenum_SetAbsoluteNumber()
+autocmd FocusGained * :call Linenum_SetRelativeNumber()
+autocmd WinLeave * :call Linenum_SetAbsoluteNumber()
+autocmd WinEnter * :call Linenum_SetRelativeNumber()
+
 " Relative number mode on Navigate mode, Numbermode on Insert mode
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * :call Linenum_SetAbsoluteNumber() 
+autocmd InsertLeave * :call Linenum_SetRelativeNumber()
 
 " easymotion leader setting
 let mapleader = ","
