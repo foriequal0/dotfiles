@@ -66,6 +66,10 @@ set hidden
 " easymotion leader setting
 let mapleader = ","
 map <Leader> <Plug>(easymotion-prefix)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 " fast move between window
 nnoremap <C-h> <C-w>h
