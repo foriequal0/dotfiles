@@ -16,6 +16,8 @@ Plugin 'gmarik/vundle'
 " scripts on GitHub repos
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 "Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
@@ -71,7 +73,7 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
+nmap t <Plug>(easymotion-bd-tl)
 let g:EasyMotion_smartcase = 1
 
 " fast move between window
