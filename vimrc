@@ -29,7 +29,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 " scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
@@ -65,7 +65,7 @@ set hidden
 
 " easymotion leader setting
 let mapleader = ","
-map <Leader><Leader> <Plug>(easymotion-prefix)
+map <Leader> <Plug>(easymotion-prefix)
 
 " fast move between window
 nnoremap <C-h> <C-w>h
