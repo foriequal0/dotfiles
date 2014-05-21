@@ -60,7 +60,7 @@ set tabstop=4 " Tab을 눌렀을 때 8칸 대신 4칸 이동하도록 한다.
 set softtabstop=4
 set shiftwidth=4 " 자동 들여쓰기를 할때 4칸 들여쓰도록 한다.
 set expandtab
-set hlsearch
+set nohlsearch
 set hidden
 
 " easymotion leader setting
@@ -70,6 +70,7 @@ map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+let g:EasyMotion_smartcase = 1
 
 " fast move between window
 nnoremap <C-h> <C-w>h
