@@ -24,6 +24,9 @@ Plugin 'ervandew/supertab'
 Plugin 'Raimondi/delimitMate'
 Plugin 'millermedeiros/vim-statline'
 Plugin 'foriequal0/vim-autonumber'
+Plugin 'vim-scripts/OmniCppComplete'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/Gundo'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -73,8 +76,12 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-bd-tl)
+nmap t <Plug>(easymotion-t2)
+omap s <Plug>(easymotion-bd-sl)
+omap t <Plug>(easymotion-bd-tl)
 let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_upper = 1
+
 
 " fast move between window
 nnoremap <C-h> <C-w>h
@@ -84,4 +91,20 @@ nnoremap <C-l> <C-w>l
 
 " Insert new line without editing mode
 nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nmap <CR> o<Esc>                                        
+
+" Gundo toggle
+map <C-g> :GundoToggle<CR>
+
+" ColorScheme
+if &t_Co > 255
+    let g:molokai_original = 1
+    colorscheme molokai
+else
+"fallback less than 256 color
+    hi ColorColumn ctermbg=8
+endif
+
+" ColorColumn on 80, and over 120
+"
+let &colorcolumn="80,".join(range(120,999),",")
