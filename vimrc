@@ -107,7 +107,9 @@ map <C-g> :GundoToggle<CR>
 
 " ColorScheme
 if &t_Co > 255
-    let g:molokai_original = 1
+    "let g:molokai_original = 1
+    "let g:molokai_original = 0
+    let g:rehash256 = 1
     colorscheme molokai
 else
 "fallback less than 256 color
