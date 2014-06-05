@@ -34,8 +34,8 @@ Plugin 'bling/vim-airline'
 Plugin 'mhinz/vim-signify'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
-Plugin 'edkolev/tmuxline.vim'
-
+"Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/promptline.vim'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -125,3 +125,8 @@ let &colorcolumn="80,".join(range(120,999),",")
 " Tagbar shortcut
 nmap <F8> :TagbarToggle<CR>
 
+"Tmuxline
+"let g:tmuxline_separators = { 'left' : '', 'left_alt': '>', 'right' : '', 'right_alt' : '<', 'space' : ' ' }
+
+" Promptline 
+"let g:promptline_symbols = { 'left' : '>', 'left_alt' : '>', 'dir_sep' : ' / ','truncation' : '...', 'vcs_branch' : '', 'space': ' ' }
