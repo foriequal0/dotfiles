@@ -129,4 +129,4 @@ nmap <F8> :TagbarToggle<CR>
 "let g:tmuxline_separators = { 'left' : '', 'left_alt': '>', 'right' : '', 'right_alt' : '<', 'space' : ' ' }
 
 " Promptline 
-"let g:promptline_symbols = { 'left' : '>', 'left_alt' : '>', 'dir_sep' : ' / ','truncation' : '...', 'vcs_branch' : '', 'space': ' ' }
+"let g:promptline_symbols = { 'left' : '>', 'left_alt' : '>', 'dir_sep' : ' / ','truncation' : '...', 'vcs_branch' : '', 'space': '' }
