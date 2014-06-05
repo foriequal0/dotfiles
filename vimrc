@@ -21,7 +21,9 @@ Plugin 'tpope/vim-surround'
 "Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
-Plugin 'Raimondi/delimitMate'
+" replaced by auto-pairs due to compatibility with supertab
+"Plugin 'Raimondi/delimitMate' 
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'millermedeiros/vim-statline'
 Plugin 'foriequal0/vim-autonumber'
 Plugin 'vim-scripts/OmniCppComplete'
@@ -106,5 +108,10 @@ else
 endif
 
 " ColorColumn on 80, and over 120
-"
 let &colorcolumn="80,".join(range(120,999),",")
+
+" DelimitMate <CR>, <Space> expansion
+"let delimitMate_expand_space = 1
+"let delimitMate_expand_cr = 2
+"let g:SuperTabCrMapping = 0
+
