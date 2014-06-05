@@ -26,7 +26,7 @@ Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'millermedeiros/vim-statline'
 Plugin 'foriequal0/vim-autonumber'
-Plugin 'vim-scripts/OmniCppComplete'
+"Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/Gundo'
 " May be replaced with itchyny/lightline.vim
@@ -126,6 +126,8 @@ let &colorcolumn="80,".join(range(120,999),",")
 
 " Tagbar shortcut
 nmap <F8> :TagbarToggle<CR>
+
+let g:airline#extensions#whitespace#enabled = 0
 
 "Tmuxline
 "let g:tmuxline_separators = { 'left' : '', 'left_alt': '>', 'right' : '', 'right_alt' : '<', 'space' : ' ' }
