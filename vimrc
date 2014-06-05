@@ -29,6 +29,13 @@ Plugin 'foriequal0/vim-autonumber'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/Gundo'
+" May be replaced with itchyny/lightline.vim
+Plugin 'bling/vim-airline' 
+Plugin 'mhinz/vim-signify'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'edkolev/tmuxline.vim'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -114,4 +121,7 @@ let &colorcolumn="80,".join(range(120,999),",")
 "let delimitMate_expand_space = 1
 "let delimitMate_expand_cr = 2
 "let g:SuperTabCrMapping = 0
+
+" Tagbar shortcut
+nmap <F8> :TagbarToggle<CR>
 
