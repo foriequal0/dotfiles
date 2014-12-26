@@ -27,19 +27,20 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'millermedeiros/vim-statline'
 Plugin 'foriequal0/vim-autonumber'
 "Plugin 'vim-scripts/OmniCppComplete'
-Plugin 'tomasr/molokai'
+"Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/Gundo'
 " May be replaced with itchyny/lightline.vim
-Plugin 'bling/vim-airline' 
+"Plugin 'bling/vim-airline' 
 Plugin 'mhinz/vim-signify'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tfnico/vim-gradle'
+"Plugin 'tfnico/vim-gradle'
+Plugin 'Chiel92/vim-autoformat'
 "Plugin 'edkolev/tmuxline.vim'
 "Plugin 'edkolev/promptline.vim'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 Plugin 'FuzzyFinder'
@@ -92,6 +93,8 @@ omap t <Plug>(easymotion-bd-tl)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
 
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 " fast move between window
 nnoremap <C-h> <C-w>h
@@ -109,11 +112,12 @@ map <C-g> :GundoToggle<CR>
 " ColorScheme
 if &t_Co > 255
     "let g:molokai_original = 1
-    "let g:molokai_original = 0
+"    let g:molokai_original = 1
     let g:rehash256 = 1
-    colorscheme molokai
+"    colorscheme molokai
+    hi ColorColumn ctermbg=8
 else
-"fallback less than 256 color
+    "fallback less than 256 color
     hi ColorColumn ctermbg=8
 endif
 
@@ -128,13 +132,5 @@ let &colorcolumn="80,".join(range(120,999),",")
 " Tagbar shortcut
 nmap <F8> :TagbarToggle<CR>
 
-let g:airline#extensions#whitespace#enabled = 0
-
 "
 nmap <C-N> :NERDTreeToggle<CR>
-
-"Tmuxline
-"let g:tmuxline_separators = { 'left' : '', 'left_alt': '>', 'right' : '', 'right_alt' : '<', 'space' : ' ' }
-
-" Promptline 
-"let g:promptline_symbols = { 'left' : '>', 'left_alt' : '>', 'dir_sep' : ' / ','truncation' : '...', 'vcs_branch' : '', 'space': '' }
