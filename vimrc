@@ -6,10 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
-"call vundle#rc(path)
+"call vundle#begin(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between here and filetype plugin indent on.
@@ -50,7 +50,7 @@ Plugin 'FuzzyFinder'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
 
-call vundle#end()
+call vundle#end()           " required
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -133,5 +133,4 @@ let &colorcolumn="80,".join(range(120,999),",")
 " Tagbar shortcut
 nmap <F8> :TagbarToggle<CR>
 
-"
 nmap <C-N> :NERDTreeToggle<CR>
