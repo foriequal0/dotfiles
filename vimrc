@@ -1,3 +1,5 @@
+" TODO: apply some from https://dougblack.io/words/a-good-vimrc.html 
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
