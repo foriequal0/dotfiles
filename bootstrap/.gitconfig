@@ -1,0 +1,4 @@
+[include]
+	path = ~/dotfiles/gitconfig.inc
+
+# site-specific configuration after here
