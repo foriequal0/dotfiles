@@ -1,5 +1,8 @@
 # vim: filetype=gitconfig
 
+[core]
+        editor = vim
+
 [alias]
         graph = log --oneline --decorate --graph
         s = scratch
