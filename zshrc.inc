@@ -76,10 +76,8 @@ is-msys || zinit light zsh-users/zsh-completions
 ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 zinit load trystan2k/zsh-tab-title
 
-zinit from"gist.github.com" as'program' reset for \
-	id-as"foriequal0/git-sync" pick"git-sync" "foriequal0/55763d9177803c325904d089299f0970" \
-	id-as"foriequal0/git-fixup" pick"git-fixup" "foriequal0/7ac461fa7e47658af231238f4c21b52a" \
-	id-as"foriequal0/git-scratch" pick"git-scratch" "foriequal0/2a3bb342b14dc8fa5ac042ae3e3c6784"
+zinit ice as"program" pick"*" reset
+zinit light "foriequal0/git-utils"
 
 ## end of zinit
 
