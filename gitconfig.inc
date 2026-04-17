@@ -17,8 +17,8 @@
         all = true
 
 [pull]
-        ff = only
         rebase = true
+        autoStash = true
 
 [diff]
         algorithm = histogram
