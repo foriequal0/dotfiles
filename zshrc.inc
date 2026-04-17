@@ -16,7 +16,8 @@ bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
-# loading at later stage would cost high startup time.
+# loading after zinit costs high startup time.
+# maybe zsh's compdef recording is slow
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 zstyle ':completion:*' menu select
@@ -67,17 +68,16 @@ is-msys() {
 
 # must be installed after `select-word-style bash`
 # ISSUE: https://github.com/zdharma-continuum/fast-syntax-highlighting/issues/88
-is-msys && zinit ice wait lucid # saves 500ms on MSYS
+zinit ice atload'zicompinit' lucid wait # shaves ~150 ms on MSYS, ~50ms on Linux
 zinit load zdharma-continuum/fast-syntax-highlighting
 
-# NOTE: takes 3 seconds to load on MSYS.
-is-msys || zinit light zsh-users/zsh-completions
+zinit load zsh-users/zsh-completions
 
 ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 zinit load trystan2k/zsh-tab-title
 
-zinit ice as"program" pick"*" reset
-zinit light "foriequal0/git-utils"
+zinit ice as"program" pick"*"
+zinit load "foriequal0/git-utils"
 
 ## end of zinit
 
